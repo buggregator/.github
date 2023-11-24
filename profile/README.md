@@ -13,7 +13,7 @@ We believe in the power of community-driven development. Here's how you can cont
 - **Feature Suggestions:** Have ideas to improve Buggregator? [We're all ears](https://github.com/buggregator/server/issues)!
 - **Code Contributions:** Fork our repo, make your changes, and submit a pull request.
 - **Documentation:** Help us improve our [guides and tutorials](https://github.com/buggregator/docs/tree/master/docs) for a smoother user experience.
-- **Community Support:** Join our [discord](https://discord.gg/FTpBM7xU) and help others get the most out of Buggregator.
+- **Community Support:** Join our [discord](https://discord.gg/vDsCD3EKUB) and help others get the most out of Buggregator.
 
 ### 👩‍💻 **Useful resources - Where can the community find our docs?**  
 All our documentation is available at [Buggregator Docs](https://docs.buggregator.dev/). Stay tuned to our community forum and social media for updates, tips, and discussions.
