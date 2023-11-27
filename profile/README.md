@@ -4,7 +4,7 @@
 
 Buggregator is a dynamic platform dedicated to streamlining application debugging with a focus on user-friendliness and practical features, we aim to simplify the process of debugging during software development.
 
-![Cover image](https://user-images.githubusercontent.com/773481/208718792-eeae35a6-c5a8-4be4-9474-2b96d222e750.png)
+<img src="https://github.com/buggregator/.github/assets/773481/24981ab5-510a-453c-a3c5-8a6f5e7bf358">
 
 ### 🌈 **Contribution guidelines - How can the community get involved?**  
 We believe in the power of community-driven development. Here's how you can contribute:
@@ -28,7 +28,7 @@ All our documentation is available at [Buggregator Docs](https://docs.buggregato
 #### [Frontend Part](https://github.com/buggregator/frontend)
 
 - **Role:** User interface display, Live event updates.
-- **Technologies:** VueJs 3, TailwindCSS, Storybook.
+- **Technologies:** [VueJs 3](https://vuejs.org/), [TailwindCSS](https://tailwindcss.com/), [Storybook](https://storybook.js.org/).
 
 #### [Trap Tool](https://github.com/buggregator/trap)
 
