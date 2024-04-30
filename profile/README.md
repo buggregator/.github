@@ -17,21 +17,3 @@ We believe in the power of community-driven development. Here's how you can cont
 
 ### 👩‍💻 **Useful resources - Where can the community find our docs?**  
 All our documentation is available at [Buggregator Docs](https://docs.buggregator.dev/). Stay tuned to our community forum and social media for updates, tips, and discussions.
-
-### 🧙 Buggregator Project Overview
-
-#### [Server Part](https://github.com/buggregator/server)
-
-- **Role:** Event processing, REST API communication.
-- **Technologies:** [Spiral Framework](https://spiral.dev/), [RoadRunner](https://roadrunner.dev/), [Centrifugo](https://centrifugal.dev/).
-
-#### [Frontend Part](https://github.com/buggregator/frontend)
-
-- **Role:** User interface display, Live event updates.
-- **Technologies:** [VueJs 3](https://vuejs.org/), [TailwindCSS](https://tailwindcss.com/), [Storybook](https://storybook.js.org/).
-
-#### [Trap Tool](https://github.com/buggregator/trap)
-
-- **Role:** Advanced PHP debugging.
-- **Features:** Supports various debugging methods, easy to install.
-- **Advantage:** More insights than symfony/var-dumper.
