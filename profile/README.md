@@ -39,7 +39,7 @@ our [Discord server](https://discord.gg/vDsCD3EKUB) to connect with other Buggre
   good choice if you want to run Buggregator on your own server or in the cloud or locally in your docker environment.
 - [**Trap**](https://github.com/buggregator/trap): A lightweight local server, designed to be embedded in your
   application as a PHP composer package.
-- [**PHPStorm Plugin**](https://github.com/buggregator/phpstorm-plugin): [Work in progress] A PHPStorm plugin to
+- [**PhpStorm Plugin**](https://github.com/buggregator/phpstorm-plugin): [Work in progress] A PhpStorm plugin to
   integrate Buggregator into your IDE
 - [**Frontend**](https://github.com/buggregator/frontend): The frontend application for Buggregator uses REST API and
   Websockets to communicate with the server.
