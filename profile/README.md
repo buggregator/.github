@@ -67,7 +67,7 @@ Consider supporting us by becoming a sponsor on GitHub: [Become a Sponsor](https
 We believe in the power of community-driven development. Here's how you can contribute:
 
 - **Report Bugs:**  Find a problem? Let us know on
-  our [issue](https://github.com/buggregator/server/issues/newhttps://github.com/buggregator/server/issues/new) tracker.
+  our [issue](https://github.com/buggregator/server/issues/new) tracker.
 - **Feature Suggestions:** Have ideas to improve
   Buggregator? [We're all ears](https://github.com/buggregator/server/issues)!
 - **Code Contributions:** Fork our repo, make your changes, and submit a pull request.
