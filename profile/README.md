@@ -92,7 +92,12 @@ Buggregator is a **standalone debugging server** that runs *beside* your applica
 
 ## Enterprise-ready when you need it
 
-SSO Authentication (Auth0, Kinde) · External Database (PostgreSQL, MySQL) · Kubernetes deployment · Webhooks · Prometheus metrics · Multi-project support
+- SSO Authentication (Auth0, Kinde)
+- External Database (PostgreSQL, MySQL)
+- Kubernetes deployment
+- Webhooks
+- Prometheus metrics
+- Multi-project support
 
 ---
 
