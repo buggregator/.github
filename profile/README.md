@@ -61,8 +61,7 @@ Buggregator is a **standalone debugging server** that runs *beside* your applica
 
 | | Repository | Description |
 |---|---|---|
-| **Server** | [`buggregator/server`](https://github.com/buggregator/server) | Full-featured debugging server as a Docker container. Built on Spiral Framework + RoadRunner. The main product for most developers. |
-| **Go Server** | [`buggregator/go-server`](https://github.com/buggregator/go-server) | Drop-in replacement — single ~30 MB binary, ~50 MB RAM. No PHP, no RoadRunner, no external database. Built-in MCP server for AI tools. |
+| **Server** | [`buggregator/server`](https://github.com/buggregator/server) | Full-featured debugging server as a Docker container or single ~30 MB binary, ~50 MB RAM. No PHP, no RoadRunner, no external database. Built-in MCP server for AI tools. 
 | **Trap** | [`buggregator/trap`](https://github.com/buggregator/trap) | Lightweight PHP CLI alternative. `composer require --dev buggregator/trap` — no Docker needed. Covers dumps, profiler, logs, SMTP, and more. |
 | **Frontend** | [`buggregator/frontend`](https://github.com/buggregator/frontend) | Vue 3 + TypeScript web UI shared between Server and Go Server. Real-time event streaming via WebSockets. |
 | **PhpStorm Plugin** | [`buggregator/phpstorm-plugin`](https://github.com/buggregator/phpstorm-plugin) | Brings debug data directly into your IDE. Never leave PhpStorm. |
@@ -72,11 +71,6 @@ Buggregator is a **standalone debugging server** that runs *beside* your applica
 | Repository | Description |
 |---|---|
 | [`helm-chart`](https://github.com/buggregator/helm-chart) | Kubernetes Helm chart for production deployment |
-| [`docker`](https://github.com/buggregator/docker) | Base Docker image |
-| [`smtp-server`](https://github.com/buggregator/smtp-server) | SMTP server plugin for RoadRunner |
-| [`monolog-server`](https://github.com/buggregator/monolog-server) | Monolog TCP receiver plugin for RoadRunner |
-| [`profiler-server`](https://github.com/buggregator/profiler-server) | XHProf profiling data processor for RoadRunner |
-| [`var-dumper-server`](https://github.com/buggregator/var-dumper-server) | Symfony VarDumper TCP receiver for RoadRunner |
 
 ---
 
@@ -105,7 +99,6 @@ Buggregator is a **standalone debugging server** that runs *beside* your applica
 
 - [**Documentation**](https://docs.buggregator.dev) — Installation, configuration, integration guides
 - [**Website**](https://buggregator.dev) — Product overview and demos
-- [**Examples**](https://github.com/buggregator/examples) — Sample applications and usage patterns
 
 ---
 
