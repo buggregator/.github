@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 Discord
+    url: https://discord.gg/qF3HpXhMEP
+    about: Ask questions and discuss ideas with the community.
+  - name: 📖 Documentation
+    url: https://docs.buggregator.dev
+    about: Guides and reference for Buggregator.
+  - name: 🔐 Security vulnerability
+    url: https://github.com/buggregator/.github/blob/master/.github/SECURITY.md
+    about: Report vulnerabilities privately, not in public issues.
