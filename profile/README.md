@@ -63,7 +63,7 @@ Open http://127.0.0.1:8000, then point your app at it: change addresses in `.env
 
 Also: SMS in the format of 42 providers, Xdebug in the browser, and a built-in **MCP server** so Claude Code, Cursor or any MCP client can read your errors, dumps and profiles.
 
-For a team or CI: a [Helm chart](https://github.com/buggregator/helm-chart), [SSO](https://docs.buggregator.dev/config/sso.html), [Prometheus metrics](https://docs.buggregator.dev/config/metrics.html), an [OpenAPI spec of the API](https://github.com/buggregator/server/blob/master/api/openapi.yaml) and a [CI example](https://github.com/buggregator/server/tree/master/examples/ci).
+For a team or CI: **Kubernetes-ready** — `helm install buggregator oci://ghcr.io/buggregator/helm-chart/buggregator` (one replica, data on a persistent volume, non-root) — plus [SSO for the UI](https://docs.buggregator.dev/config/sso.html), [Prometheus metrics](https://docs.buggregator.dev/config/metrics.html), an [OpenAPI spec of the API](https://github.com/buggregator/server/blob/master/api/openapi.yaml) and a [CI example](https://github.com/buggregator/server/tree/master/examples/ci).
 
 <table>
   <tr>
@@ -84,7 +84,7 @@ For a team or CI: a [Helm chart](https://github.com/buggregator/helm-chart), [SS
 | [**trap**](https://github.com/buggregator/trap) | A small PHP CLI alternative: `composer require --dev buggregator/trap`, no Docker or binary. |
 | [**frontend**](https://github.com/buggregator/frontend) | The web UI (Vue 3, TypeScript), built into every server release. |
 | [**docs**](https://github.com/buggregator/docs) | The documentation at [docs.buggregator.dev](https://docs.buggregator.dev). Fixes welcome. |
-| [**helm-chart**](https://github.com/buggregator/helm-chart) | Run it in Kubernetes for a team or CI. |
+| [**helm-chart**](https://github.com/buggregator/helm-chart) | The official Helm chart: one `helm install`, data on a persistent volume, non-root. |
 | [**phpstorm-plugin**](https://github.com/buggregator/phpstorm-plugin) | Buggregator in PhpStorm. |
 
 ## Get involved
