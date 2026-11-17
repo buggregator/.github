@@ -1,121 +1,97 @@
 <div align="center">
-    <br>
-    <a href="https://buggregator.dev" target="_blank">
-        <picture>
-            <source media="(prefers-color-scheme: dark)" srcset="https://github.com/buggregator/.github/blob/master/logo/logo-dark-theme.svg?raw=true">
-            <img width="50%" align="center" src="https://github.com/buggregator/.github/blob/master/logo/logo-light-theme.svg?raw=true" alt="Buggregator Logo">
-        </picture>
-    </a>
-    <br>
-    <br>
+  <br>
+  <a href="https://buggregator.dev">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/buggregator/.github/blob/master/logo/logo-dark-theme.svg?raw=true">
+      <img width="40%" src="https://github.com/buggregator/.github/blob/master/logo/logo-light-theme.svg?raw=true" alt="Buggregator">
+    </picture>
+  </a>
+  <br><br>
 </div>
 
-<h3 align="center">Debug everything in your PHP app. Install nothing.</h3>
+<h3 align="center">One local server for everything your app sends while you develop</h3>
 
 <p align="center">
-One <code>docker run</code> command gives you exceptions, logs, emails, profiling, dumps, and more — all in one real-time UI.<br>
-No cloud account. No code changes. No new dependencies. <b>Free forever.</b>
+Errors, dumps, emails, logs, profiles and HTTP requests — in one window on your machine.<br>
+Built for PHP. Node.js, browser JavaScript, Python, Go and Java send errors through their Sentry SDK; mail and HTTP work from any language.<br>
+<b>Free, MIT, no account, no cloud.</b>
 </p>
 
-<div align="center">
+<p align="center">
+  <a href="https://github.com/buggregator/server/releases/latest"><img src="https://img.shields.io/github/v/release/buggregator/server?style=flat-square&label=server" alt="Latest release"></a>
+  <a href="https://github.com/buggregator/server/stargazers"><img src="https://img.shields.io/github/stars/buggregator/server?style=flat-square&color=yellow" alt="Stars"></a>
+  <a href="https://hub.docker.com/r/butschster/buggregator"><img src="https://img.shields.io/docker/pulls/butschster/buggregator?style=flat-square" alt="Docker pulls"></a>
+  <a href="https://discord.gg/vDsCD3EKUB"><img src="https://img.shields.io/badge/discord-chat-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Discord"></a>
+  <a href="https://x.com/buggregator"><img src="https://img.shields.io/badge/follow-%40buggregator-black?style=flat-square&logo=x" alt="Follow on X"></a>
+</p>
 
-[![Stars](https://img.shields.io/github/stars/buggregator?style=flat-square&label=Stars&color=yellow)](https://github.com/buggregator/server)
-[![Twitter](https://img.shields.io/badge/-Follow-black?style=flat-square&logo=X)](https://x.com/intent/follow?screen_name=buggregator)
-[![Discord](https://img.shields.io/discord/1172942458598985738?style=flat-square&logo=discord&labelColor=7289d9&logoColor=white&color=39456d)](https://discord.gg/vDsCD3EKUB)
-[![Support](https://img.shields.io/static/v1?style=flat-square&label=Support&message=%E2%9D%A4&logo=GitHub&color=%23fe4e86)](https://github.com/sponsors/buggregator)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/buggregator/server/master/.github/assets/demo.gif" width="90%" alt="Buggregator in 30 seconds: events arrive, then an exception, an email, dumps and a profile are opened">
+</p>
 
-</div>
-
-<br>
+## Run it
 
 ```bash
-docker run -p 8000:8000 -p 1025:1025 -p 9912:9912 -p 9913:9913 -p 9914:9914 ghcr.io/buggregator/server:latest
+# Linux, macOS — one binary, no sudo
+curl -fsSL https://raw.githubusercontent.com/buggregator/server/master/scripts/install.sh | sh
+buggregator
 ```
 
-<p align="center">Open <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a> — that's it. No login, no setup, no registration.</p>
+```powershell
+# Windows (PowerShell)
+irm https://raw.githubusercontent.com/buggregator/server/master/scripts/install.ps1 | iex
+```
 
----
+```bash
+# Docker
+docker run --pull always -p 127.0.0.1:8000:8000 -p 127.0.0.1:1025:1025 \
+  -p 127.0.0.1:9912:9912 -p 127.0.0.1:9913:9913 ghcr.io/buggregator/server:latest
+```
 
-## Replaces your local dev stack — for free
+Open http://127.0.0.1:8000, then point your app at it: change addresses in `.env`, not code. [Getting started →](https://docs.buggregator.dev/getting-started.html)
 
-Buggregator is a **standalone debugging server** that runs *beside* your application, not inside it. Your app's `composer.json` stays untouched. You just redirect your existing SDKs to a local address.
+## What it replaces on your machine
 
-| Instead of | You get |
-|---|---|
-| Sentry (local) | Exception tracking with full stack traces |
-| Mailhog / Mailtrap | Email capture and HTML preview |
-| Ray (Spatie) | Variable dumps, queries, models, jobs |
-| Blackfire / XHProf UI | Performance profiling with call graphs |
-| Log viewers | Real-time Monolog aggregation |
-| RequestBin | HTTP request inspection |
-| Inspector.dev (local) | Application performance monitoring |
-| SMS gateways (dev) | SMS interception for 40+ providers |
-
-**All of this. One command. Zero cost.**
-
----
-
-## The Buggregator ecosystem
-
-### Core products
-
-| | Repository | Description |
+| Instead of | Buggregator catches | Sent from |
 |---|---|---|
-| **Server** | [`buggregator/server`](https://github.com/buggregator/server) | Full-featured debugging server as a Docker container or single ~30 MB binary, ~50 MB RAM. No PHP, no RoadRunner, no external database. Built-in MCP server for AI tools. 
-| **Trap** | [`buggregator/trap`](https://github.com/buggregator/trap) | Lightweight PHP CLI alternative. `composer require --dev buggregator/trap` — no Docker needed. Covers dumps, profiler, logs, SMTP, and more. |
-| **Frontend** | [`buggregator/frontend`](https://github.com/buggregator/frontend) | Vue 3 + TypeScript web UI shared between Server and Go Server. Real-time event streaming via WebSockets. |
-| **PhpStorm Plugin** | [`buggregator/phpstorm-plugin`](https://github.com/buggregator/phpstorm-plugin) | Brings debug data directly into your IDE. Never leave PhpStorm. |
+| A cloud Sentry project for local errors | Exceptions, traces, logs, metrics | Sentry SDK (DSN) |
+| Mailpit, MailHog, Mailtrap | Emails with HTML preview, plus an API for E2E tests | Any SMTP client |
+| The Ray app, for viewing `ray()` calls | Dumps, queries, models, jobs | Symfony VarDumper, Spatie Ray |
+| A log viewer | Logs, live | Monolog |
+| An XHProf UI | Call graph, flame chart, top functions | XHProf |
+| RequestBin, a hand-written stub API | Any HTTP request, outgoing calls via a proxy, a mock server from rules or an OpenAPI spec | curl, webhooks, your app |
 
-### Infrastructure & Plugins
+Also: SMS in the format of 42 providers, Xdebug in the browser, and a built-in **MCP server** so Claude Code, Cursor or any MCP client can read your errors, dumps and profiles.
 
-| Repository | Description |
+For a team or CI: a [Helm chart](https://github.com/buggregator/helm-chart), [SSO](https://docs.buggregator.dev/config/sso.html), [Prometheus metrics](https://docs.buggregator.dev/config/metrics.html), an [OpenAPI spec of the API](https://github.com/buggregator/server/blob/master/api/openapi.yaml) and a [CI example](https://github.com/buggregator/server/tree/master/examples/ci).
+
+<table>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/buggregator/server/master/.github/assets/sentry.webp" alt="A Sentry exception with its stack trace"></td>
+    <td><img src="https://raw.githubusercontent.com/buggregator/server/master/.github/assets/smtp.webp" alt="An order confirmation email in the HTML preview"></td>
+  </tr>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/buggregator/server/master/.github/assets/dumps.webp" alt="VarDumper dumps: a boolean, a number, a string and an SQL query"></td>
+    <td><img src="https://raw.githubusercontent.com/buggregator/server/master/.github/assets/profiler.webp" alt="A profiler call graph, slow functions in red"></td>
+  </tr>
+</table>
+
+## Repositories
+
+| | |
 |---|---|
-| [`helm-chart`](https://github.com/buggregator/helm-chart) | Kubernetes Helm chart for production deployment |
+| [**server**](https://github.com/buggregator/server) | The server: one Go binary or a Docker image. Start here. |
+| [**trap**](https://github.com/buggregator/trap) | A small PHP CLI alternative: `composer require --dev buggregator/trap`, no Docker or binary. |
+| [**frontend**](https://github.com/buggregator/frontend) | The web UI (Vue 3, TypeScript), built into every server release. |
+| [**docs**](https://github.com/buggregator/docs) | The documentation at [docs.buggregator.dev](https://docs.buggregator.dev). Fixes welcome. |
+| [**helm-chart**](https://github.com/buggregator/helm-chart) | Run it in Kubernetes for a team or CI. |
+| [**phpstorm-plugin**](https://github.com/buggregator/phpstorm-plugin) | Buggregator in PhpStorm. |
 
----
+## Get involved
 
-## Works with your stack
+- **Something broke or is missing?** [Open an issue](https://github.com/buggregator/server/issues/new) — or a pull request in any repo.
+- **Security issue?** Report it privately: [SECURITY.md](https://github.com/buggregator/server/blob/master/SECURITY.md).
+- **Questions, ideas:** [Discord](https://discord.gg/vDsCD3EKUB).
+- **Saved you time?** [Star the server](https://github.com/buggregator/server/stargazers) — that is how other developers find it. Want to do more: [sponsor the project](https://github.com/sponsors/buggregator).
 
-**Frameworks:** Laravel, Symfony, Spiral, WordPress, Yii3, Drupal — and anything that uses standard PHP debugging SDKs.
-
-**Async runtimes:** RoadRunner, FrankenPHP, Swoole, Laravel Octane — where tools like Telescope don't work, Buggregator does.
-
-**Beyond PHP:** JavaScript, Python, Ruby, Go — via Sentry SDK.
-
----
-
-## Enterprise-ready when you need it
-
-- SSO Authentication (Auth0, Kinde)
-- External Database (PostgreSQL, MySQL)
-- Kubernetes deployment
-- Webhooks
-- Prometheus metrics
-- Multi-project support
-
----
-
-## Resources
-
-- [**Documentation**](https://docs.buggregator.dev) — Installation, configuration, integration guides
-- [**Website**](https://buggregator.dev) — Product overview and demos
-
----
-
-## Contributing
-
-- **Report bugs:** [Open an issue](https://github.com/buggregator/server/issues/new)
-- **Suggest features:** [Start a discussion](https://github.com/buggregator/server/issues)
-- **Submit code:** Fork, change, PR — contributions welcome across all repos
-- **Improve docs:** [Edit documentation](https://github.com/buggregator/docs)
-- **Join the community:** [Discord](https://discord.gg/vDsCD3EKUB)
-
----
-
-<div align="center">
-
-**Buggregator is free forever. Sponsors make that possible.**
-
-[Become a Sponsor](https://github.com/sponsors/buggregator)
-
-</div>
+<p align="center"><a href="https://buggregator.dev">buggregator.dev</a> · <a href="https://docs.buggregator.dev">docs.buggregator.dev</a></p>
